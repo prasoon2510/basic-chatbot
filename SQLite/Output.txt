@@ -1,0 +1,199 @@
+Tickets waiting for classification: 5
+
+Processing Ticket ID: 1
+Subject: Payment deducted twice
+Category: Billing
+Urgency: High
+Saved successfully!
+
+Processing Ticket ID: 2
+Subject: Application crashing
+Category: Technical
+Urgency: Medium
+Saved successfully!
+
+Processing Ticket ID: 3
+Subject: Change email address
+Category: Account
+Urgency: Low
+Saved successfully!
+
+Processing Ticket ID: 4
+Subject: Order not delivered
+Category: Delivery
+Urgency: Medium
+Saved successfully!
+
+Processing Ticket ID: 5
+Subject: Account hacked
+Category: Account
+Urgency: High
+Saved successfully!
+
+=======================================================
+       CUSTOMER SUPPORT TICKET REPORT
+=======================================================
+
+Total Tickets: 5
+
+CATEGORY-WISE REPORT
+Account: 2
+Technical: 1
+Delivery: 1
+Billing: 1
+
+URGENCY-WISE REPORT
+High: 2
+Medium: 2
+Low: 1
+
+CRITICAL TICKETS
+No critical tickets found.
+
+COMPLETE TICKET REPORT
+ID: 1 | Customer: John | Subject: Payment deducted twice | Category: Billing | Urgency: High
+ID: 2 | Customer: Sarah | Subject: Application crashing | Category: Technical | Urgency: Medium
+ID: 3 | Customer: David | Subject: Change email address | Category: Account | Urgency: Low
+ID: 4 | Customer: Priya | Subject: Order not delivered | Category: Delivery | Urgency: Medium
+ID: 5 | Customer: Mike | Subject: Account hacked | Category: Account | Urgency: High
+
+Unclassified Tickets: 0
+
+=======================================================
+              REPORT COMPLETED
+=======================================================
+PS C:\Users\SrikantaAdiraju\SQLite> dir
+
+
+    Directory: C:\Users\SrikantaAdiraju\SQLite
+
+
+Mode                 LastWriteTime         Length Name                                                                           
+----                 -------------         ------ ----                                                                           
+d-----        02-11-2026     15:53                .vscode                                                                        
+-a----        02-11-2026     16:07          12288 support_tickets.db                                                             
+-a----        02-11-2026     16:03           9982 ticket_classifier.py                                                           
+
+# ----------------------------------------------------------------------------------------------------
+
+AzureAD+SrikantaAdiraju@INHYDES-E102 UCRT64 ~/SQLite (main)
+$ ollama pull qwen2.5:7b
+pulling manifest 
+pulling 2bada8a74506: 100% ▕█████████████████████████████████████████████████████████████████████████████████████████████████▏ 4.7 GB                         
+pulling 66b9ea09bd5b: 100% ▕█████████████████████████████████████████████████████████████████████████████████████████████████▏   68 B                         
+pulling eb4402837c78: 100% ▕█████████████████████████████████████████████████████████████████████████████████████████████████▏ 1.5 KB                         
+pulling 832dd9e00a68: 100% ▕█████████████████████████████████████████████████████████████████████████████████████████████████▏  11 KB                         
+pulling 2f15b3218f05: 100% ▕█████████████████████████████████████████████████████████████████████████████████████████████████▏  487 B                         
+verifying sha256 digest 
+writing manifest 
+removing unused layers 
+success 
+
+
+AzureAD+SrikantaAdiraju@INHYDES-E102 UCRT64 ~/SQLite (main)
+$ python --version
+Python 3.13.9
+
+AzureAD+SrikantaAdiraju@INHYDES-E102 UCRT64 ~/SQLite (main)
+$ ollama list
+NAME          ID              SIZE      MODIFIED      
+qwen2.5:7b    845dbda0ea48    4.7 GB    6 minutes ago    
+
+AzureAD+SrikantaAdiraju@INHYDES-E102 UCRT64 ~/SQLite (main)
+$ python ticket_classifier.py --seed-demo
+Demo tickets inserted successfully.
+
+Tickets waiting for classification: 5
+
+Processing Ticket ID: 1
+Subject: Payment deducted twice
+Category: Billing
+Urgency: High
+Saved successfully!
+
+Processing Ticket ID: 2
+Subject: Application crashing
+Category: Technical
+Urgency: Medium
+Saved successfully!
+
+Processing Ticket ID: 3
+Subject: Change email address
+Category: Account
+Urgency: Low
+Saved successfully!
+
+Processing Ticket ID: 4
+Subject: Order not delivered
+Category: Delivery
+Urgency: Medium
+Saved successfully!
+
+Processing Ticket ID: 5
+Subject: Account hacked
+Category: Account
+Urgency: High
+Saved successfully!
+
+=======================================================
+       CUSTOMER SUPPORT TICKET REPORT
+=======================================================
+
+Total Tickets: 5
+
+CATEGORY-WISE REPORT
+Account: 2
+Technical: 1
+Delivery: 1
+Billing: 1
+
+URGENCY-WISE REPORT
+High: 2
+Medium: 2
+Low: 1
+
+CRITICAL TICKETS
+No critical tickets found.
+
+COMPLETE TICKET REPORT
+ID: 1 | Customer: John | Subject: Payment deducted twice | Category: Billing | Urgency: High
+ID: 2 | Customer: Sarah | Subject: Application crashing | Category: Technical | Urgency: Medium
+ID: 3 | Customer: David | Subject: Change email address | Category: Account | Urgency: Low
+ID: 4 | Customer: Priya | Subject: Order not delivered | Category: Delivery | Urgency: Medium
+ID: 5 | Customer: Mike | Subject: Account hacked | Category: Account | Urgency: High
+
+Unclassified Tickets: 0
+
+=======================================================
+              REPORT COMPLETED
+=======================================================
+
+AzureAD+SrikantaAdiraju@INHYDES-E102 UCRT64 ~/SQLite (main)
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
