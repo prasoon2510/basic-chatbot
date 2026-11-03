@@ -6,5 +6,10 @@ python-docx
 python-pptx
 openpyxl
 pandas
+<<<<<<< HEAD
 dotenv
 pillow
+=======
+pillow
+dotenv
+>>>>>>> dede62d8ef6003bf19d97817155598498b8f9bc0
