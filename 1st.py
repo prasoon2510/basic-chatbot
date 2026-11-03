@@ -8,5 +8,6 @@ result = obj.responses.create(
     model = "openai/gpt-oss-20b",
     input= input("Enter the question:"))
 print (result.output_text)
+print ("Program Ended")
 
 
