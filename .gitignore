@@ -1,6 +1,17 @@
+<<<<<<< HEAD
+.venv/
+__pycache__/
+*.pyc
+
+.env
+loan_payload.json
+
+.vscode/
+=======
 
 venv/
 .env
 __pycache__/
 *.pyc
 .streamlit/secrets.toml
+>>>>>>> origin/main
