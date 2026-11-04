@@ -1,0 +1,399 @@
+
+1. Basic Linux Commands
+
+pwd                       # Display current working directory
+ls                        # List files and directories
+ls -l                     # Detailed list
+ls -a                     # Show hidden files
+ls -la                    # Show all files with details
+ls -lh                    # Human-readable file sizes
+clear                     # Clear terminal
+whoami                    # Display current username
+hostname                  # Display system hostname
+date                      # Display current date and time
+cal                       # Display calendar
+history                   # Display command history
+man ls                    # Open manual for ls
+help                      # Display shell built-in help
+echo "Hello Linux"        # Print text
+
+
+2. Directory Management
+
+pwd                       # Current directory
+cd                        # Go to home directory
+cd /                      # Go to root directory
+cd ..                     # Go one directory backward
+cd ../..                  # Go two directories backward
+cd ~                      # Go to home directory
+cd -                      # Go to previous directory
+mkdir test                # Create directory
+mkdir dir1 dir2           # Create multiple directories
+mkdir -p a/b/c            # Create nested directories
+rmdir test                # Remove empty directory
+rm -r test                # Remove directory and contents
+rm -rf test               # Force remove directory
+tree                      # Display directory structure
+
+
+3. File Management Commands
+
+touch file.txt            # Create an empty file
+cat file.txt              # Display file content
+cat > file.txt            # Create/write file content
+cat >> file.txt           # Append content
+less file.txt             # Read file page by page
+more file.txt             # Read file
+head file.txt             # Display first 10 lines
+head -n 5 file.txt        # Display first 5 lines
+tail file.txt             # Display last 10 lines
+tail -n 5 file.txt        # Display last 5 lines
+tail -f file.txt          # Monitor file continuously
+cp file.txt copy.txt      # Copy file
+cp -r folder folder2      # Copy directory
+mv file.txt new.txt       # Rename file
+mv file.txt /tmp/         # Move file
+rm file.txt               # Delete file
+rm -i file.txt            # Delete with confirmation
+file file.txt             # Identify file type
+stat file.txt             # Display file information
+
+
+4. Nano Editor Commands
+
+nano file.txt             # Open or create a file
+nano -l file.txt          # Show line numbers
+nano -c file.txt          # Show cursor position
+
+Inside Nano:
+
+CTRL + O     Save file
+CTRL + X     Exit Nano
+CTRL + K     Cut current line
+CTRL + U     Paste cut text
+CTRL + W     Search text
+CTRL + \     Search and replace
+CTRL + G     Help
+CTRL + C     Show cursor position
+CTRL + A     Move to beginning of line
+CTRL + E     Move to end of line
+CTRL + Y     Previous page
+CTRL + V     Next page
+ALT + U      Undo
+ALT + E      Redo
+
+
+5. File Permissions
+
+ls -l file.txt            # Check permissions
+chmod 777 file.txt        # Give all permissions to everyone
+chmod 755 file.txt        # Owner full, others read and execute
+chmod 644 file.txt        # Owner read/write, others read
+chmod +x script.sh        # Add execute permission
+chmod -x script.sh        # Remove execute permission
+chmod u+x script.sh      # Add execute for owner
+chmod g+w file.txt        # Add group write permission
+chmod o-r file.txt        # Remove others read permission
+chown user file.txt       # Change file owner
+chgrp group file.txt      # Change group ownership
+umask                     # Display default permission mask
+
+
+6. Searching Commands
+
+find . -name "file.txt"               # Find file by name
+find . -type f                        # Find all files
+find . -type d                        # Find all directories
+find . -name "*.py"                   # Find Python files
+find . -size +10M                     # Find files larger than 10 MB
+grep "hello" file.txt                 # Search text
+grep -i "hello" file.txt              # Case-insensitive search
+grep -n "hello" file.txt              # Display line numbers
+grep -r "hello" .                     # Search recursively
+grep -v "hello" file.txt              # Display non-matching lines
+grep -w "hello" file.txt              # Match whole word
+grep -E "cat|dog" file.txt            # Search multiple patterns
+which python                          # Find executable location
+whereis python                        # Find binary/source/manual
+locate file.txt                       # Locate files
+
+
+7. System Information Commands
+
+
+uname -a                  # Complete system information
+uname -r                  # Kernel version
+hostnamectl               # Hostname information
+lscpu                     # CPU information
+lsmem                     # Memory information
+free -h                   # RAM usage
+df -h                     # Disk space
+du -h file.txt            # File size
+du -sh folder             # Directory size
+lsblk                     # List storage devices
+who                       # Logged-in users
+w                         # User activity
+uptime                    # System running time
+top                       # Running processes
+htop                      # Interactive process viewer
+ps                        # Current shell processes
+ps aux                    # All running processes
+
+
+
+8. Process Management
+
+
+ps aux                    # List all processes
+top                       # Monitor processes
+htop                      # Interactive monitoring
+pgrep python              # Find Python process ID
+pidof python              # Get process ID
+kill PID                  # Terminate process
+kill -9 PID               # Force terminate process
+killall python            # Kill processes by name
+pkill python              # Kill matching processes
+jobs                      # Display background jobs
+bg                        # Resume job in background
+fg                        # Bring job to foreground
+command &                 # Run command in background
+nohup command &           # Run command after terminal closes
+nice -n 10 command        # Set process priority
+
+
+
+9. User Management
+
+
+whoami                    # Current user
+id                        # User and group IDs
+users                     # Logged-in usernames
+who                       # Logged-in users
+sudo command              # Run command as administrator
+su username               # Switch user
+sudo adduser username     # Create user
+sudo userdel username     # Delete user
+sudo userdel -r username  # Delete user and home directory
+sudo passwd username      # Change user password
+sudo groupadd developers  # Create group
+sudo groupdel developers  # Delete group
+groups                    # Display user groups
+
+
+10. Package Management (Ubuntu / WSL)
+
+
+sudo apt update                 # Update package lists
+sudo apt upgrade                # Upgrade installed packages
+sudo apt full-upgrade           # Full system upgrade
+sudo apt install package        # Install package
+sudo apt remove package         # Remove package
+sudo apt purge package          # Remove package and configuration
+sudo apt autoremove             # Remove unused packages
+sudo apt clean                  # Clear package cache
+apt search package              # Search packages
+apt show package                # Package information
+dpkg -l                         # List installed packages
+dpkg -i package.deb             # Install .deb package
+
+
+
+11. Networking Commands
+
+
+ip addr                         # Display IP addresses
+ip a                            # Short form
+ip route                        # Display routing table
+ip link                         # Network interfaces
+ping google.com                 # Test connectivity
+ping -c 4 google.com            # Send 4 packets
+curl https://example.com        # Fetch URL
+curl -I https://example.com     # Display HTTP headers
+wget https://example.com/file   # Download file
+ss -tuln                        # Display listening ports
+ss -tulpn                       # Display listening processes
+netstat -tuln                   # Network connections (if installed)
+nslookup google.com             # DNS lookup
+dig google.com                  # DNS information
+traceroute google.com           # Trace network route
+hostname -I                     # Display IP addresses
+
+
+12. Disk and Storage Commands
+
+df -h                     # Disk usage
+du -sh *                  # Sizes of files and folders
+du -ah                    # All file sizes
+lsblk                     # Block devices
+blkid                     # Block device information
+mount                     # Mounted filesystems
+findmnt                   # Mounted filesystem tree
+free -h                   # Memory usage
+sync                      # Synchronize filesystem data
+
+
+13. Archive and Compression
+
+tar -cvf archive.tar folder/          # Create tar archive
+tar -xvf archive.tar                  # Extract tar archive
+tar -czvf archive.tar.gz folder/     # Create compressed archive
+tar -xzvf archive.tar.gz             # Extract compressed archive
+gzip file.txt                         # Compress file
+gunzip file.txt.gz                    # Decompress file
+zip archive.zip file.txt              # Create ZIP archive
+unzip archive.zip                     # Extract ZIP archive
+zip -r archive.zip folder/            # ZIP a directory
+
+
+14. Input and Output Redirection
+
+echo "Hello" > file.txt        # Write/overwrite file
+echo "Hello" >> file.txt       # Append to file
+cat < file.txt                 # Read from file
+ls > output.txt                # Save output
+ls >> output.txt               # Append output
+ls 2> error.txt                # Redirect errors
+ls > output.txt 2>&1           # Redirect output and errors
+command1 | command2            # Pipe output
+ls | grep ".txt"               # Filter output
+cat file.txt | wc -l           # Count lines
+
+
+15. Text Processing Commands
+
+
+wc file.txt                    # Count lines, words, bytes
+wc -l file.txt                 # Count lines
+wc -w file.txt                 # Count words
+wc -c file.txt                 # Count bytes
+sort file.txt                  # Sort lines
+sort -r file.txt               # Reverse sorting
+sort -n numbers.txt            # Numeric sorting
+uniq file.txt                  # Remove adjacent duplicates
+sort file.txt | uniq           # Remove duplicates
+cut -d',' -f1 file.csv         # Extract first CSV column
+tr 'a-z' 'A-Z'                 # Convert lowercase to uppercase
+sed 's/old/new/g' file.txt     # Replace text
+awk '{print $1}' file.txt      # Print first column
+
+
+16. Environment Variables
+
+env                            # Display environment variables
+printenv                       # Print environment variables
+echo $HOME                     # Home directory
+echo $USER                     # Current username
+echo $PATH                     # Executable search path
+export NAME="Linux"            # Create environment variable
+unset NAME                     # Remove environment variable
+echo $SHELL                    # Current shell
+
+
+17. Shell Scripting Commands
+
+bash script.sh                 # Execute shell script
+sh script.sh                   # Execute using sh
+chmod +x script.sh             # Make executable
+./script.sh                    # Run script
+read name                      # Read user input
+echo $name                     # Print variable
+exit                           # Exit script
+sleep 5                        # Wait 5 seconds
+date                           # Display date
+
+Example shell script:
+
+
+#!/bin/bash
+
+echo "Enter your name:"
+read name
+
+echo "Hello $name"
+
+echo "Current date:"
+date
+
+
+18. SSH and Remote Access
+
+ssh username@hostname         # Connect to remote server
+ssh username@192.168.1.10     # Connect using IP
+ssh -p 2222 username@host     # Connect using custom port
+scp file.txt user@host:/tmp/  # Copy file to remote server
+scp user@host:/tmp/file.txt . # Download remote file
+sftp username@hostname       # Secure file transfer
+
+
+19. Advanced Linux Commands
+
+xargs                         # Build commands from input
+tee file.txt                   # Write output to file and terminal
+watch -n 2 ls                  # Repeat command every 2 seconds
+alias ll='ls -la'              # Create command alias
+unalias ll                     # Remove alias
+type ls                        # Identify command type
+command -v python              # Find command location
+history | grep "nano"          # Search command history
+timeout 10 command             # Run command with time limit
+time ls                        # Measure execution time
+strace ls                      # Trace system calls (if installed)
+lsof                           # List open files (if installed)
+
+
+20. Important WSL Commands (Run in Windows PowerShell)
+
+These are Windows-side commands, not Linux terminal commands.
+
+wsl                         # Open default WSL distribution
+wsl --list --verbose        # List installed distributions
+wsl --shutdown              # Shut down WSL
+wsl --terminate Ubuntu      # Stop Ubuntu
+wsl --distribution Ubuntu  # Open Ubuntu
+wsl --update                # Update WSL
+wsl --status                # Show WSL status
+wsl --version               # Show WSL version
+wsl --list --online         # Available distributions
+
+
+21. Important Linux Shortcuts
+
+Shortcut	Purpose
+CTRL + C	Stop running command
+CTRL + Z	Suspend process
+CTRL + D	Exit shell / EOF
+CTRL + L	Clear terminal
+CTRL + A	Beginning of command
+CTRL + E	End of command
+CTRL + U	Delete before cursor
+CTRL + K	Delete after cursor
+CTRL + R	Search history
+TAB	Auto-complete
+↑ / ↓	Previous/next commands
+
+
+22. Practice Commands
+
+
+Try executing these commands one by one in your WSL terminal.
+mkdir linux_practice
+cd linux_practice
+touch file1.txt file2.txt file3.txt
+mkdir documents
+mv file1.txt documents/
+cp file2.txt file3.txt
+ls -la
+pwd
+cat > file2.txt
+
+
+Enter some text and press CTRL + D to finish.
+
+cat file2.txt
+cp file2.txt backup.txt
+mv backup.txt final.txt
+find . -name "*.txt"
+grep "Linux" file2.txt
+wc -l file2.txt
+chmod 755 file2.txt
+ls -l
